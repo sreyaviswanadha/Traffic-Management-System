@@ -1,7 +1,7 @@
 /* Global styles */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
     text-align: center;
     margin: 0;
     padding: 0;
@@ -26,9 +26,11 @@ h2 {
 /* Navigation buttons */
 .nav-btn {
     display: block;
-    width: 100%;
+    width: 90%;
     padding: 12px;
-    margin: 10px 0;
+    margin: 10px auto 10px 0px;
+    text-align: left;
+    padding-left: 37px;
     text-decoration: none;
     background-color: #007bff;
     color: white;
