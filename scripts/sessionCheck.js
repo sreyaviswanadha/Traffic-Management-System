@@ -10,10 +10,12 @@ document.addEventListener("DOMContentLoaded", function () {
     } else {
         // Only block forward navigation if coming from login page
         if (document.referrer.includes("LoginPage.html")) {
+            window.history.replaceState(null, "", window.location.href);
             window.history.pushState(null, "", window.location.href);
-            window.onpopstate = function (event) {
+
+            window.onpopstate = function () {
                 if (!localStorage.getItem("loggedInUser")) {
-                    window.history.forward(); // Prevent going forward to dashboard after logout
+                    window.history.pushState(null, "", window.location.href);
                 }
             };
         }

@@ -4,48 +4,66 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add a new Owner</title>
-    <link rel="stylesheet" href="styles/style1.css">
-    <script type="text/javascript" src="/databases/OwnerDetails.js"></script>
+    <link rel="stylesheet" href="styles/ownerStyles.css">
+    <script type="text/javascript" src="scripts/ownerDetails.js"></script>
 </head>
 <body>
-    <h1>Add a new Owner</h1>
-    <div>
+    <h1 class="portal-title">Add a New Owner</h1>
+    <div class="owner-container">
         <form id="ownerForm" onsubmit="return saveOwnerDetails();">
             <label for="firstName">First Name</label> <br>
-            <input type="text" id="firstName" name="firstName" placeholder="Enter First Name"><br>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter First Name" required><br>
             <label for="lastName">Last Name</label> <br>
-            <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name"><br>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name" required><br>
             <label for="DOB">Date Of Birth</label> <br>
-            <input type="date" id="DOB" name="DOB"><br>
+            <input type="date" id="DOB" name="DOB" required><br>
             <label for="phone">Phone Number</label> <br>
-            <input type="text" id="phone" name="phone" placeholder="Enter Phone Number"><br>
+            <input type="text" id="phone" name="phone" placeholder="Enter Phone Number" required><br>
             <label for="gender">Gender</label> <br>
-            <input type="radio" id="male" name="gender" value="Male">
+            <input type="radio" id="male" name="gender" value="Male" required>
             <label for="male">Male</label><br>
-            <input type="radio" id="female" name="gender" value="Female">
-            <label for="female">Female</label><br>
+            <input type="radio" id="female" name="gender" value="Female" required>
+            <label for="female">Female</label><br><br>
             <label for="tempAddress">Temporary Address</label> <br>
-            <input type="text" id="tempAddress" name="tempAddress" placeholder="Enter Temporary Address"><br>
+            <input type="text" id="tempAddress" name="tempAddress" placeholder="Enter Temporary Address" required><br>
             <label for="permAddress">Permanent Address</label> <br>
-            <input type="text" id="permAddress" name="permAddress" placeholder="Enter Permanent Address"><br>
+            <input type="text" id="permAddress" name="permAddress" placeholder="Enter Permanent Address" required><br>
             <label for="pincode">Pincode</label> <br>
-            <input type="text" id="pincode" name="pincode" placeholder="Enter Pincode"><br>
+            <input type="text" id="pincode" name="pincode" placeholder="Enter Pincode" required><br>
             <label for="occupation">Occupation</label>
-            <select name="occupation" id="occupation">
+            <select name="occupation" id="occupation" required>
                 <option value="engineer">Engineer</option>
                 <option value="farmer">Farmer</option>
                 <option value="businessperson">Business Person</option>
                 <option value="student">Student</option>
+                <option value="doctor">Doctor</option>
+                <option value="teacher">Teacher</option>
+                <option value="lawyer">Lawyer</option>
+                <option value="artist">Artist</option>
+                <option value="banker">Banker</option>
+                <option value="government_employee">Government Employee</option>
+                <option value="software_developer">Software Developer</option>
+                <option value="self_employed">Self-Employed</option>
+                <option value="freelancer">Freelancer</option>
+                <option value="retired">Retired</option>
+                <option value="other">Other</option>
             </select> <br>
             <label for="panNum">PAN Number</label> <br>
-            <input type="text" id="panNum" name="panNum" placeholder="Enter PAN Number"><br>
+            <input type="text" id="panNum" name="panNum" placeholder="Enter PAN Number" required><br>
             <label for="proofName">Address Proof Name</label> <br>
-            <input type="text" id="proofName" name="proofName" placeholder="Enter Address Proof Name"><br>
+            <select name="proofName" id="proofName" required>
+                <option value="passport">Passport</option>
+                <option value="aadhar">Aadhar Card</option>
+                <option value="license">Driving License</option>
+                <option value="voter_id">Voter ID</option>
+                <option value="ration_card">Ration Card</option>
+                <option value="electricity_bill">Electricity Bill</option>
+                <option value="bank_statement">Bank Statement</option>
+                <option value="other">Other</option>
+            </select> <br>
             <input type="submit" value="Submit">
         </form>
     </div>
     <a href="OwnerRead.html">View Records</a>
 </body>
 </html>
-
-

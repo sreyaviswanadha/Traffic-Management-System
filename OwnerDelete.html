@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Owner</title>
+    <link rel="stylesheet" href="styles/loginStyles.css">
+    <script type="text/javascript" src="scripts/dataSeed.js" defer></script>
+    <script type="text/javascript" src="scripts/ownerDelete.js" defer></script>
+</head>
+<body>
+    <h1 class="portal-title">Delete Owner</h1>
+    <div class="owner-container">
+        <label for="deleteFullName">Enter Full Name (First Name + Last Name) to Delete:</label>
+        <input type="text" id="deleteFullName" placeholder="Enter Full Name">
+        <button onclick="deleteOwner()">Delete Owner</button>
+        <p id="deleteStatus"></p>
+    </div>
+</body>
+</html>
