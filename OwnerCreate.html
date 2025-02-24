@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a new Owner</title>
+    <link rel="stylesheet" href="styles/style1.css">
+    <script type="text/javascript" src="/databases/OwnerDetails.js"></script>
+</head>
+<body>
+    <h1>Add a new Owner</h1>
+    <div>
+        <form id="ownerForm" onsubmit="return saveOwnerDetails();">
+            <label for="firstName">First Name</label> <br>
+            <input type="text" id="firstName" name="firstName" placeholder="Enter First Name"><br>
+            <label for="lastName">Last Name</label> <br>
+            <input type="text" id="lastName" name="lastName" placeholder="Enter Last Name"><br>
+            <label for="DOB">Date Of Birth</label> <br>
+            <input type="date" id="DOB" name="DOB"><br>
+            <label for="phone">Phone Number</label> <br>
+            <input type="text" id="phone" name="phone" placeholder="Enter Phone Number"><br>
+            <label for="gender">Gender</label> <br>
+            <input type="radio" id="male" name="gender" value="Male">
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="Female">
+            <label for="female">Female</label><br>
+            <label for="tempAddress">Temporary Address</label> <br>
+            <input type="text" id="tempAddress" name="tempAddress" placeholder="Enter Temporary Address"><br>
+            <label for="permAddress">Permanent Address</label> <br>
+            <input type="text" id="permAddress" name="permAddress" placeholder="Enter Permanent Address"><br>
+            <label for="pincode">Pincode</label> <br>
+            <input type="text" id="pincode" name="pincode" placeholder="Enter Pincode"><br>
+            <label for="occupation">Occupation</label>
+            <select name="occupation" id="occupation">
+                <option value="engineer">Engineer</option>
+                <option value="farmer">Farmer</option>
+                <option value="businessperson">Business Person</option>
+                <option value="student">Student</option>
+            </select> <br>
+            <label for="panNum">PAN Number</label> <br>
+            <input type="text" id="panNum" name="panNum" placeholder="Enter PAN Number"><br>
+            <label for="proofName">Address Proof Name</label> <br>
+            <input type="text" id="proofName" name="proofName" placeholder="Enter Address Proof Name"><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <a href="OwnerRead.html">View Records</a>
+</body>
+</html>
+
+
