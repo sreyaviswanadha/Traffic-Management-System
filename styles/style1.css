@@ -43,3 +43,20 @@ h2 {
 .nav-btn:hover {
     background-color: #0056b3;
 }
+
+.logout-btn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.logout-btn:hover {
+    background-color: #c82333;
+}

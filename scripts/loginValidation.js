@@ -1,17 +1,18 @@
 function validateLogin(event) {
-    event.preventDefault(); // Prevent default form submission
-
+    event.preventDefault();
     var email = document.getElementById("email").value;
     var password = document.getElementById("password").value;
 
     var users = {
-        "admin@tms.com": { password: "admin123", redirect: "AdminLogin.html" },
-        "rto@tms.com": { password: "rto123", redirect: "RTOLogin.html" },
-        "cop@tms.com": { password: "cop123", redirect: "CopLogin.html" },
-        "clerk@tms.com": { password: "clerk123", redirect: "ClerkLogin.html" }
+        "admin@tms.com": { password: "admin123", role: "admin", redirect: "AdminDashboard.html" },
+        "rto@tms.com": { password: "rto123", role: "rto", redirect: "RTODashboard.html" },
+        "cop@tms.com": { password: "cop123", role: "cop", redirect: "CopDashboard.html" },
+        "clerk@tms.com": { password: "clerk123", role: "clerk", redirect: "ClerkDashboard.html" }
     };
 
     if (users[email] && users[email].password === password) {
+        // Store login session
+        localStorage.setItem("loggedInUser", JSON.stringify(users[email]));
         window.location.href = users[email].redirect;
     } else {
         alert("Invalid email or password.");
