@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add a new Owner</title>
-    <link rel="stylesheet" href="styles/ownerStyles.css">
+    <link rel="stylesheet" href="styles/ownerCreate.css">
     <script type="text/javascript" src="scripts/ownerDetails.js"></script>
 </head>
 <body>
     <h1 class="portal-title">Add a New Owner</h1>
+    <button id="returnToDashboardBtn" onclick="returnToDashboard()">Return to Dashboard</button>
     <div class="owner-container">
         <form id="ownerForm" onsubmit="return saveOwnerDetails();">
             <label for="firstName">First Name</label> <br>
@@ -64,6 +65,8 @@
             <input type="submit" value="Submit">
         </form>
     </div>
-    <a href="OwnerRead.html">View Records</a>
+    <script type="text/javascript" src="scripts/returnToOwnerDashboard.js"></script>
+    <button onclick="logout()" class = "logout-btn">Logout</button>
+    <script src="scripts/logout.js" defer></script>
 </body>
 </html>

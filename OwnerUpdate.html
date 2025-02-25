@@ -5,23 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Update Owner Details</title>
     <link rel="stylesheet" href="styles/loginStyles.css">
-    <script type="text/javascript" src="scripts/dataSeed.js" defer></script>
     <script type="text/javascript" src="scripts/ownerUpdate.js" defer></script>
 </head>
 <body>
-    <h1 class="portal-title">Update Owner Details</h1>
-    <div class="owner-container">
+    <button id="returnToDashboardBtn" onclick="returnToDashboard()">Return to Dashboard</button>
+    <h1>Update Owner Details</h1>
+    
+    <!-- Search by Full Name -->
+    <div>
         <label for="fullName">Enter Full Name (First Name + Last Name):</label>
         <input type="text" id="fullName" placeholder="Enter Full Name">
         <button onclick="fetchOwnerDetails()">Fetch Details</button>
-
-        <form id="updateOwnerForm" style="display: none;" onsubmit="return updateOwnerDetails();">
-            <label for="phone">Phone Number</label>
-            <input type="text" id="phone" required><br>
-            <label for="pincode">Pincode</label>
-            <input type="text" id="pincode" required><br>
-            <input type="submit" value="Update">
-        </form>
     </div>
+
+    <!-- Update Owner Form -->
+    <form id="updateOwnerForm" style="display: none;" onsubmit="return updateOwnerDetails();">
+        <label for="newFirstName">First Name</label>
+        <input type="text" id="newFirstName" required><br>
+
+        <label for="newLastName">Last Name</label>
+        <input type="text" id="newLastName" required><br>
+
+        <label for="newPhone">Phone</label>
+        <input type="text" id="newPhone"><br>
+
+        <label for="newTempAddress">Temporary Address</label>
+        <input type="text" id="newTempAddress"><br>
+
+        <label for="newPermAddress">Permanent Address</label>
+        <input type="text" id="newPermAddress"><br>
+
+        <label for="newProofName">Proof Name</label>
+        <input type="text" id="newProofName"><br>
+
+        <label for="newPincode">Pincode</label>
+        <input type="text" id="newPincode"><br>
+
+        <input type="submit" value="Update Owner">
+    </form>
+    <script type="text/javascript" src="scripts/returnToOwnerDashboard.js"></script>
+    <button onclick="logout()" class = "logout-btn">Logout</button>
+    <script src="scripts/logout.js" defer></script>
 </body>
 </html>

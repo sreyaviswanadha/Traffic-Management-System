@@ -3,17 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Owner Details</title>
+    <title>Owner Details</title>
     <link rel="stylesheet" href="styles/loginStyles.css">
-    <script type="text/javascript" src="scripts/dataSeed.js" defer></script>
     <script type="text/javascript" src="scripts/ownerRead.js" defer></script>
 </head>
 <body>
-    <div class="login-container">
+    <h1>Search Owner Details</h1>
+    <button id="returnToDashboardBtn" onclick="returnToDashboard()">Return to Dashboard</button>
+    <div>
+        <!-- Search by Vehicle Number -->
         <label for="vehicleNumber">Enter Vehicle Number:</label>
         <input type="text" id="vehicleNumber" placeholder="Enter Vehicle Number">
-        <button onclick="searchOwnerByVehicle()">Search</button>
-        <div id="ownerDetails" class="owner-details"></div>
+        <button onclick="searchOwnerByVehicle()">Search by Vehicle</button>
     </div>
+
+    <div>
+        <!-- Search by Full Name -->
+        <label for="fullName">Enter Full Name (First Name + Last Name):</label>
+        <input type="text" id="fullName" placeholder="Enter Full Name">
+        <button onclick="searchOwnerByFullName()">Search by Full Name</button>
+    </div>
+
+    <!-- Owner Details Section -->
+    <div id="ownerDetails"></div>
+    <script type="text/javascript" src="scripts/returnToOwnerDashboard.js"></script>
+    <button onclick="logout()" class = "logout-btn">Logout</button>
+    <script src="scripts/logout.js" defer></script>
 </body>
 </html>

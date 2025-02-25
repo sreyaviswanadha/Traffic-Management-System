@@ -95,8 +95,9 @@ function saveOwnerDetails() {
 
     // Dynamically create the success page content
     document.body.innerHTML = `
+        <button id="returnToDashboardBtn" onclick="returnToDashboard()">Return to Dashboard</button>
         <h2>Successfully Submitted!</h2>
         <p>Your details have been saved successfully.</p>
-        <a href="OwnerRead.html">View All Records</a>
+        <script type="text/javascript" src="scripts/returnToOwnerDashboard.js"></script>
     `;
 }
